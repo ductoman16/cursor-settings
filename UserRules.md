@@ -33,4 +33,13 @@ Unit Test Rules:
 - When running in agent mode, always run tests after every change
 - When running tests, always include a timeout parameter of 10-20 seconds so that they do not hang forever.
 
+CUSTOM COMMANDS:
+`/build`: Run the appropriate build command, and fix any issues you encounter.
+
+`/tests`:
+- Run the appropriate test command
+- Locate the first failing test, and annouce that you are fixing it
+- Fix the test, keeping in mind that it may be either the test case itself, or the code under test, that is broken
+- Repeat until no test failures
+
 ```
