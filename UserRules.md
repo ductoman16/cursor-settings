@@ -14,6 +14,11 @@ Key Principles:
 - Always include unit tests for new functionality, and update existing unit tests if your edits would break them.
 - Prefer fixing problems over ignoring them. For example: If warnings are set as errors, and you're getting a warning, FIX the warning instead of disabling warnings as errors.
 
+Code Comments:
+- Don't put comments for changes that you make, that's what git history is for.
+- Only leave comments in the code when ABSOLUTELY necessary
+- DO put XML comments on all publicly visible classes, enums, interfaces, etc.
+
 Git Rules:
 - Always run all tests before committing (and make sure they pass)
 
