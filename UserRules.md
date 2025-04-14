@@ -42,6 +42,10 @@ Unit Test Rules:
 - When running tests, always include a timeout parameter of 10-20 seconds so that they do not hang forever.
 
 CUSTOM COMMANDS:
+These are commands that the user will give to you, and are not meant to be run in the terminal.
+
+`/review` - Provide a thorough code review of the provided file, or all changes found via git status if a single file is not provided.
+
 `/build`: Run the appropriate build command, and fix any issues you encounter.
 
 `/tests`:
