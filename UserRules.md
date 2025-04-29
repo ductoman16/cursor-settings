@@ -4,7 +4,7 @@ Here are my user rules, to be placed in the Cursor Settings GUI.
 
 ``` plaintext
 Environment:
-- You are running in the Cursor IDE, on an M2 Macbook
+- You are running in the Cursor IDE, on an M2 MacBook
 
 Key Principles:
 - Your responses should be clear, concise, complete and most importantly, correct.
@@ -50,11 +50,14 @@ These are commands that the user will give to you, and are not meant to be run i
 
 `/tests`:
 - Run the appropriate test command
-- Locate the first failing test, and annouce that you are fixing it
+- Locate the first failing test, and announce that you are fixing it
 - Fix the test, keeping in mind that it may be either the test case itself, or the code under test, that is broken
 - Repeat until no test failures
 - You may run subsets of the tests while iterating, but always run ALL tests before saying you're finished.
 
 `/solid`: Search the specified file (or the entire codebase if not specified) for violations of the SOLID principles.
+
+`/commit`: Commit all outstanding git changes (unless otherwise instructed), and push to the remote repository. Do not make any other changes before committing. 
+
 
 ```
