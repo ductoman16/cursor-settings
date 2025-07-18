@@ -222,7 +222,9 @@ CUSTOM COMMANDS:
 `/critical`: Please THINK CRITICALLY about what the user is saying. Do NOT blindly agree. Try to come up with counter-arguments and poke holes in their assertions.
 
 `/consistency`: Analyze the provided files, or outstanding git changes if not provided, or the entire repo if no outstanding changes, for consistency. Ensure similar components use the same strategies and patterns. Provide a report of violations found, and then ask the user which ones you should fix.
-```
+
+`/main`: Merge main into the current working branch, in order to get the latest changes. Make sure to pull main first, and fix all merge conflicts that arise. Push the working branch once finished.
+```1
 
 ``` plaintext
 Unit Test Rules:
