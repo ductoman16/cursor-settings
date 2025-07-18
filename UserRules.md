@@ -281,7 +281,7 @@ Unit Test Rules:
 ``` plaintext
 Git Rules:
 - Always run all tests before committing (and make sure they pass)
-
+- When committing, use a very brief semantic commit message
 ```
 
 ``` plaintext
