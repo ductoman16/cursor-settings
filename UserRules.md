@@ -209,7 +209,7 @@ CUSTOM COMMANDS:
 `/review`: Give a thorough review of the current code, or if no code is specified, use git to find the current outstanding changes
 
 `/tests`:
-- Run the appropriate test command
+- Run the appropriate test command (NEVER use --no-build or equivalent to skip building)
 - Locate the first failing test, and annouce that you are fixing it
 - Fix the test, keeping in mind that it may be either the test case itself, or the code under test, that is broken
 - Repeat until no test failures
