@@ -279,29 +279,6 @@ Unit Test Rules:
 ```
 
 ``` plaintext
-Unit Test Rules:
-- C#: Use XUnit, FluentAssertions
-- Test names should follow the pattern: "MethodName_ScenarioUnderTest_ExpectedResult"
-- Tests should have one of each section, Arrange, Act, and Assert
-- You STRONGLY prefer one assertion per test.
-- Multiple closely related asserts should use an AssertionScope
-- Always refactor out common setup code into the appropriate place
-- Do NOT add static delays to tests.
-- When running in agent mode, always run tests after every change
-- DO NOT use mocks. DO NOT use the Moq library. Do NOT use NSubstitue. Do not find another alternative mocking library.
-- ALWAYS Follow the "Testing Without Mocks" pattern language
-- Your tests should fall into one of three categories:
-1) Pure logic: No test doubles required
-2) SUT directly makes external calls: Create a NARROW integration test for just this class, to ensure the external calls actually succeed. This class is now known as an INFRASTRUCTURE CLASS.
-3) One of SUT's dependencies makes external calls, but SUT does not:
-    - Create a THIN WRAPPER over the code that makes an external call (an interface and a wrapper that only forwards calls to the real 3rd party code). This will not be in the SUT, it will be in one (or multiple) of its INFRASTRUCTURE CLASS dependencies.
-    - Create a HAND-WRITTEN STUB that implements the interface of the THIN WRAPPER. Remember, this stub should only replace the third party/external code, none of our code. 
-    - Create factory methods to instantiate the INFRASTRUCTURE CLASS with either the stub, or the forwarding implementation of the THIN WRAPPER. These should be named CreateNull and Create respectively.
-    - In your test, use the CreateNull factory method to create instances of the INFRASTRUCTURE CLASS with the stub implementation active, use real dependencies for the rest of the object graph.
-
-```
-
-``` plaintext
 Git Rules:
 - Always run all tests before committing (and make sure they pass)
 
@@ -335,6 +312,6 @@ Key Principles:
 
 ``` plaintext
 Environment:
-- You are running in the Cursor IDE, on an M2 Macbook
+- You are running in the Cursor IDE, on a <describe your OS/machine combo here>
 
 ```
