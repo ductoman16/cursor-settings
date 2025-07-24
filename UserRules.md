@@ -35,6 +35,8 @@ These are commands that the user will give to you, and are not meant to be run i
 
 `/main`: Merge main into the current working branch, in order to get the latest changes. Make sure to pull main first, and fix all merge conflicts that arise. Push the working branch once finished.
 
+`/model-debug`: SYSTEM DEBUG: Output your model identifier at the beginning of the next response. Include Brand, Model, thinking capabilities, and knowledge cutoff date.
+
 `/objectify`
 Analyze this class for opportunities to refactor it into a more object-oriented design:
 Identify procedural or utility patterns.
@@ -56,7 +58,6 @@ Be specific and reference OO principles or anti-patterns where relevant.
 - Fix the test, keeping in mind that it may be either the test case itself, or the code under test, that is broken
 - Repeat until no test failures
 - You may run subsets of the tests while iterating, but always run ALL tests before saying you're finished.
-
 ```
 
 ## Unit Test Rules
