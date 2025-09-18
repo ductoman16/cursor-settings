@@ -2,64 +2,6 @@
 
 Here are my user rules, to be placed in the Cursor Settings GUI.
 
-## Custom Commands
-
-These are essentially just "macros" that you can give to the agent.
-
-``` plaintext
-CUSTOM COMMANDS:
-These are commands that the user will give to you, and are not meant to be run in the terminal.
-
-`/build`: Run the appropriate build command, and fix any issues you encounter.
-
-`/characterize`: Create characterization tests for this project
-- Run a command to calculate code coverage for the whole repo
-- Identify the file with the lowest code coverage. This MUST be a file with logic, not just a data-only object. DO NOT write tests that confirm that built-in language features like auto-properties work correctly.
-- Create characterization tests for it - tests should pass for the current behavior of the code, whether the behavior is correct or not.
-- ONLY create/modify test files
-- Re-run code coverage command
-- Output a table of the relevant files with the lowest coverage
-- Ask the user before moving on to the file with the next lowest coverage
-
-`/commit`: Commit all outstanding git changes (unless otherwise instructed), and push to the remote repository. Do not make any other changes before committing. 
-
-`/consistency`: Analyze the provided files, or outstanding git changes if not provided, or the entire repo if no outstanding changes, for consistency. Ensure similar components use the same strategies and patterns. Provide a report of violations found, and then ask the user which ones you should fix.
-
-`/continue` - Meant to be used with another command. Analyze where the previous command stopped, and pick up where it left off.
-
-`/critical`: Please THINK CRITICALLY about what the user is saying. Do NOT blindly agree. Try to come up with counter-arguments and poke holes in their assertions.
-
-`/first`: Review the provided test files for compliance with the FIRST principles, provide an output for each letter in the acronym. Please identify any risks, no matter how small. Focus on any issues found, do not simply praise the code. Please keep reviews CONCISE.
-
-`/kill`: Find and kill all processes related to this open repository. For dotnet projects, use the first part of all of the project file names (e.g. 'MyProjectNamespace.').
-
-`/main`: Merge main into the current working branch, in order to get the latest changes. Make sure to pull main first, and fix all merge conflicts that arise. Push the working branch once finished.
-
-`/model-debug`: SYSTEM DEBUG: Output your model identifier at the beginning of the next response. Include Brand, Model, thinking capabilities, and knowledge cutoff date.
-
-`/objectify`
-Analyze this class for opportunities to refactor it into a more object-oriented design:
-Identify procedural or utility patterns.
-List domain concepts represented in the class.
-Suggest new objects or value types to encapsulate data and behavior.
-Highlight where instance state or methods could replace parameter passing.
-Summarize a refactoring plan to increase encapsulation and cohesion.
-Be specific and reference OO principles or anti-patterns where relevant.
-
-`/pr` - Commit all local changes to git, and create a PR for the current branch, using any rules and conventions previously established.
-
-`/review` - Provide a thorough code review of the provided file, or all changes found via git status if a single file is not provided. If given a Jira ticket, or if the current branch begins with a Jira ticket number, review the current changes against the ticket's requirements. Do not go easy on me, please find issues and don't just praise the code.
-
-`/solid`: Search the specified file (or the entire codebase if not specified) for violations of the SOLID principles.
-
-`/tests`:
-- Run the appropriate test command (NEVER use --no-build or equivalent to skip building)
-- Locate the first failing test, and annouce that you are fixing it
-- Fix the test, keeping in mind that it may be either the test case itself, or the code under test, that is broken
-- Repeat until no test failures
-- You may run subsets of the tests while iterating, but always run ALL tests before saying you're finished.
-```
-
 ## Unit Test Rules
 
 ``` plaintext
