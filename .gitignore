@@ -398,3 +398,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Repository specific exclusions
+extensions/
+unified_repo_list.json
+argv.json
+ide_state.json
