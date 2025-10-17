@@ -8,6 +8,13 @@
       ],
       "enabled": true,
       "serverStartCommand_runThisManually": "npx @agentdeskai/browser-tools-server@1.2.0"
+    },
+    "Atlassian-MCP-Server": {
+      "url": "https://mcp.atlassian.com/v1/sse"
+    },
+    "Figma": {
+      "url": "https://mcp.figma.com/mcp",
+      "headers": {}
     }
   }
 }
