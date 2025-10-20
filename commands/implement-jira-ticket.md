@@ -25,5 +25,7 @@ Autonomously implement the provided Jira ticket with full development workflow.
 5. Write comprehensive tests and ensure they exercise the functionality.
 6. Review all outstanding git changes, looking for functional correctness, duplicated code, opportunities for refactoring, and code standard adherence. Fix any issues.
 7. Commit the changes, push the branch.
-8. Create a PR to main, with a very brief description.
+8. Create a Draft PR to main, with a very brief description.
 9. Poll the status of the Azure DevOps build for the PR, until it succeeds. If it does not succeed, fix any errors, commit, and repeat until it passes.
+10. Move the ticket to "Peer Review" state.
+11. Do NOT leave any comments on the ticket.
