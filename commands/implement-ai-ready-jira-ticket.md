@@ -1,6 +1,6 @@
 # Implement Jira Ticket Command
 
-Autonomously implement a ticket with the "ai-ready" tag in Jira.
+Autonomously implement a ticket with the "ai-ready" tag in Jira. This is a workflow for you, the AI agent, to execute.
 
 ## Usage
 
@@ -22,8 +22,9 @@ Autonomously implement a ticket with the "ai-ready" tag in Jira.
 
 1. Query Jira using the Atlassian MCP to find the next ticket with the following criteria
     a. Must have the "ai-ready" tag
-    b. Must have no open blocking tickets
-    c. If provided, must be a child of the provided Jira Epic or Project
+    b. Must be unassigned, and not started
+    c. Must have no open blocking tickets
+    d. If provided, must be a child of the provided Jira Epic or Project
 2. Order the tickets by priority
 3. Choose a single ticket with the highest priority
 
@@ -37,5 +38,7 @@ Autonomously implement a ticket with the "ai-ready" tag in Jira.
 6. Make the necessary code changes, following existing codebase patterns.
 7. Write comprehensive tests and ensure they exercise the functionality.
 8. Review all outstanding git changes, looking for functional correctness, duplicated code, opportunities for refactoring, and code standard adherence. Fix any issues.
-9. Commit the changes, push the branch, and create a PR to main.
+9. Commit the changes, push the branch, and create a Draft PR to main.
 10. Poll the status of the Azure DevOps build for the PR, until it succeeds. If it does not succeed, fix any errors.
+11. Move the ticket to "Peer Review" state.
+12. Do NOT leave any comments on the ticket.
