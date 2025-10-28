@@ -1,0 +1,150 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "📦 dotnet build",
+            "type": "shell",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "./CertifID.V2.EsignatureBFF.sln"
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "🧪 dotnet test",
+            "command": "dotnet",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/"
+            },
+            "args": [
+                "test",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "🔬 dotnet test (Unit)",
+            "command": "dotnet",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/"
+            },
+            "args": [
+                "test",
+                "--filter",
+                "Category=Unit",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "group": "test",
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "🌐 dotnet test (Integration)",
+            "command": "dotnet",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/"
+            },
+            "args": [
+                "test",
+                "--filter",
+                "Category=Integration",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "group": "test",
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "🎯 dotnet test (Current File)",
+            "command": "dotnet",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/"
+            },
+            "args": [
+                "test",
+                "--filter",
+                "FullyQualifiedName~${fileBasenameNoExtension}",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "group": "test",
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "👾 dotnet stryker",
+            "command": "dotnet",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/"
+            },
+            "args": [
+                "stryker"
+            ],
+            "group": "test"
+        },
+        {
+            "label": "📊 coverage report",
+            "command": "node",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/"
+            },
+            "args": [
+                "..\\utility-scripts\\coverage-report\\coverage-report.js"
+            ],
+            "group": "test"
+        },
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/CertifID.V2.EsignatureBFF.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/CertifID.V2.EsignatureBFF.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/CertifID.V2.EsignatureBFF.sln"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

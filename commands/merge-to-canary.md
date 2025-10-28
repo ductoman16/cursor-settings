@@ -13,3 +13,4 @@ Fast forward merge the main branch into the canary branch
 6. Run `git merge --ff-only main`
 7. Push the canary branch
 8. Find all Jira tickets numbers that are associated with the PR, and update them to "Ready To Test" state
+9. Checkout the `main` branch again
