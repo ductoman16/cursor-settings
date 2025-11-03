@@ -404,3 +404,6 @@ extensions/
 unified_repo_list.json
 argv.json
 ide_state.json
+
+worktrees/
+projects/
