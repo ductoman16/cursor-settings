@@ -19,6 +19,7 @@ Autonomously implement the provided Jira ticket with full development workflow.
 ## Workflow
 
 1. Analyze the requirements in the ticket.
+    a. If you cannot access the ticket contents: STOP and inform the user.
 2. Assign me to the ticket, and mark the ticket as "In Progress".
 3. Create a new branch off main, starting with the ticket number.
 4. Make the necessary code changes, following existing codebase patterns.
