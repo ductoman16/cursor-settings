@@ -1,3 +1,9 @@
+---
+name: characterize-file
+description: Characterization Tests Command (File)
+disable-model-invocation: true
+---
+
 # Characterization Tests Command (File)
 
 Create characterization tests for one or more specified files.

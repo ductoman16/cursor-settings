@@ -1,3 +1,9 @@
+---
+name: fix-tests-systematic
+description: Fix Tests Command (Systematic)
+disable-model-invocation: true
+---
+
 # Fix Tests Command (Systematic)
 
 Run the appropriate test command and fix all failing tests, going through them one by one with user confirmation at each step.

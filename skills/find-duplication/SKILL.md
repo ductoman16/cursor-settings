@@ -1,3 +1,9 @@
+---
+name: find-duplication
+description: Find Duplication
+disable-model-invocation: true
+---
+
 # Find Duplication
 
 Scan the provided files (or the whole project if no files are specified) for duplicated code relating specifically to domain-level functionality.
