@@ -13,3 +13,12 @@
 # User-level cursor rules
 !rules/
 !rules/**
+
+# Specific files
+skills/azdo-test-failures/**
+skills/create-pr/**
+skills/implement-jira-ticket/**
+skills/create-tests-auto/**
+skills/implement-ai-ready-jira-ticket/**
+skills/merge-to-canary/**
+skills/review-jira-ticket/**
